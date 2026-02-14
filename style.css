@@ -1,0 +1,249 @@
+body{
+
+  margin:0;
+
+  font-family:'Poppins', sans-serif;
+
+  overflow:hidden;
+
+  text-align:center;
+
+}
+
+/* Page System */
+
+.page{
+
+  position:absolute;
+
+  width:100%;
+
+  height:100vh;
+
+  display:none;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.page.active{
+
+  display:flex;
+
+}
+
+/* Content Layer */
+
+.content{
+
+  position:relative;
+
+  z-index:2;
+
+  color:white;
+
+  text-shadow:0 0 15px hotpink;
+
+}
+
+/* Dark Glow Background (Middle Pages) */
+
+#page2,#page3,#page4,#page5{
+
+  background:linear-gradient(135deg,#140014,#2b0033);
+
+  position:relative;
+
+}
+
+#page2::before,#page3::before,#page4::before,#page5::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100%;
+
+  height:100%;
+
+  background:
+
+    radial-gradient(circle at 30% 30%, rgba(255,20,147,0.6), transparent 40%),
+
+    radial-gradient(circle at 70% 70%, rgba(255,105,180,0.5), transparent 40%);
+
+  pointer-events:none;
+
+}
+
+/* First Page */
+
+#page1{
+
+  background-image:url("https://i.postimg.cc/MTnMR2gF/Snapchat-1758247521.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  position:relative;
+
+}
+
+#page1::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100%;
+
+  height:100%;
+
+  background:linear-gradient(rgba(20,0,20,0.7),rgba(255,20,147,0.6));
+
+  pointer-events:none;
+
+}
+
+/* Final Page */
+
+.last-page{
+
+  background-image:url("https://i.postimg.cc/jS8Sh36T/IMG-20260129-160411220-HDR.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  position:relative;
+
+}
+
+.last-page::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100%;
+
+  height:100%;
+
+  background:linear-gradient(rgba(20,0,20,0.7),rgba(255,20,147,0.6));
+
+  pointer-events:none;
+
+}
+
+/* Buttons */
+
+button{
+
+  padding:12px 25px;
+
+  border:none;
+
+  border-radius:30px;
+
+  background:linear-gradient(45deg,#ff1493,#ff69b4);
+
+  color:black;
+
+  font-weight:bold;
+
+  margin:15px;
+
+  cursor:pointer;
+
+}
+
+#noBtn{
+
+  position:absolute;
+
+  left:120px;
+
+  background:gray;
+
+}
+
+/* GIF */
+
+.gif-row img{
+
+  width:120px;
+
+  margin:10px;
+
+  border-radius:20px;
+
+}
+
+/* Ring */
+
+.ring-box{
+
+  position:relative;
+
+  width:120px;
+
+  height:120px;
+
+  cursor:pointer;
+
+}
+
+.box{
+
+  width:120px;
+
+  height:60px;
+
+  background:#ff1493;
+
+  position:absolute;
+
+  bottom:0;
+
+  border-radius:10px;
+
+}
+
+.lid{
+
+  width:120px;
+
+  height:60px;
+
+  background:#ff69b4;
+
+  position:absolute;
+
+  top:0;
+
+  border-radius:10px;
+
+  transform-origin:bottom;
+
+  transition:transform 1s ease;
+
+}
+
+#ring{
+
+  position:absolute;
+
+  top:35px;
+
+  left:45px;
+
+  font-size:35px;
+
+  opacity:0;
+
+  transition:opacity 1s ease;
+
+}
